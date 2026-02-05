@@ -1,6 +1,5 @@
 import React from 'react';
 import "./globals.css";
-import { Analytics } from '@vercel/analytics/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({
@@ -15,7 +14,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={theme}>
         {children}
-        <Analytics />
         {gaID && <GoogleAnalytics gaId={gaID} />}
       </body>
     </html>
